@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin:0;
+    height: 100%;
+}
+
+section {
+    padding: 0 60px 0 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+button {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align:center;
+    color: whitesmoke;
+    background-color: #52B6C2;
+    border: 2px solid #52B6C2;
+    border-radius:2px;
+    padding: 12px 28px;
+}
+
+button:hover {
+    background-color: whitesmoke;
+    border: 2px solid #52B6C2;
+    color: #52B6C2;
+}
+
+#intro {
+    height: 100%;
+    background-image: url("img/background_beach.png");
+}
+
+#intro article {
+    width: 50%;
+    color: whitesmoke;
+}
+
+#intro button {
+    margin-top: 30px;
+}
