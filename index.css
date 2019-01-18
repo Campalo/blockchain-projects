@@ -48,12 +48,15 @@ button:hover {
     color: #52B6C2;
 }
 
+
+
 /* scalability issue for the background image either on large or small screens
 it might be because the space to cover is not defined*/
 #intro {
-    background-image: url("img/background_beach.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(img/blockstojump.png), url(img/background_beach.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, bottom;
+    background-size: 100% 30%, cover;
 }
 
 #intro article {
@@ -63,5 +66,37 @@ it might be because the space to cover is not defined*/
 
 #intro button {
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
+
+#ccl {
+    padding: 0 60px 0 60px;
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#ccl > *{
+    width: 30%;
+}
+
+#ccl h4 {
+    text-align: center;
+}
+
+footer {
+    padding: 0 60px 0 60px;
+    background-color: black;
+    color: whitesmoke;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#copyright {
+    font-size: 0.9rem;
+}
+    
