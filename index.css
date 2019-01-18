@@ -21,7 +21,6 @@ section {
     align-content: flex-start;
 }
 
-
 h1 {
     font-size: 3rem;
 }
@@ -49,9 +48,12 @@ button:hover {
     color: #52B6C2;
 }
 
+/* scalability issue for the background image either on large or small screens
+it might be because the space to cover is not defined*/
 #intro {
-    height: 100%;
     background-image: url("img/background_beach.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #intro article {
@@ -61,4 +63,5 @@ button:hover {
 
 #intro button {
     margin-top: 30px;
+    margin-bottom: 30px;
 }
