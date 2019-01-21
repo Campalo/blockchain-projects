@@ -50,13 +50,13 @@ button:hover {
 
 
 
-/* scalability issue for the background image either on large or small screens
-it might be because the space to cover is not defined*/
+/* Detailed style elements*/
+
 #intro {
-    background-image: url(img/blockstojump.png), url(img/background_beach.png);
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom, bottom;
-    background-size: 100% 30%, cover;
+    background-image: url(img/blocksbeach.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
 }
 
 #intro article {
