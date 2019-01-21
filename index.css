@@ -19,6 +19,7 @@ section {
     flex-direction: column;
     justify-content: center;
     align-content: flex-start;
+    min-height: 100%;
 }
 
 h1 {
@@ -57,6 +58,8 @@ button:hover {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
+    width: 100%;
+    height: auto;
 }
 
 #intro article {
@@ -70,33 +73,50 @@ button:hover {
 }
 
 #ccl {
-    padding: 0 60px 0 60px;
     background-color: black;
     color: whitesmoke;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    min-height: 20%;
 }
-#ccl > *{
+
+#ccl > * {
     width: 30%;
 }
 
 #ccl h4 {
     text-align: center;
+    font-size: 2rem;
+    color: #52B6C2;
+}
+
+#ccl div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#ccl div button {
+    padding: 8px 8px;
+    border: none;
 }
 
 footer {
-    padding: 0 60px 0 60px;
+    padding: 0 10px 0 10px;
     background-color: black;
     color: whitesmoke;
-    height: 50px;
+    min-height: 10%;
+    width: auto;
     display: flex;
+    direction: column;
     justify-content: center;
     align-content: center;
 }
 
 #copyright {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
     
