@@ -2,6 +2,10 @@
 
 * {
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    /* by default css takes only the element,
+    so if you have a padding then it pushes the element outside the screen dimension.
+    By taking the padding + element, the box-sizing solves this issue. */    
 }
 
 html {
@@ -15,11 +19,6 @@ body {
 
 section {
     padding: 0 60px 0 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: flex-start;
-    min-height: 100%;
 }
 
 h1 {
@@ -40,26 +39,37 @@ button {
     background-color: #52B6C2;
     border: 2px solid #52B6C2;
     border-radius:2px;
-    padding: 12px 28px;
 }
 
 button:hover {
     background-color: whitesmoke;
-    border: 2px solid #52B6C2;
     color: #52B6C2;
 }
 
 
+/* main button
+ and hover designs */ 
+.main {
+    padding: 12px 28px;
+}
 
-/* Detailed style elements*/
+.main:hover {
+    border: 2px solid #52B6C2;
+}
 
+
+/* intro section
+ + article + button design */
 #intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
     background-image: url(img/blocksbeach.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
-    width: 100%;
-    height: auto;
+    min-height: 100%;
 }
 
 #intro article {
@@ -72,6 +82,9 @@ button:hover {
     margin-bottom: 60px;
 }
 
+
+/* ccl section 
++ h4 + button designs */
 #ccl {
     background-color: black;
     color: whitesmoke;
@@ -79,16 +92,20 @@ button:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    min-height: 20%;
 }
 
 #ccl > * {
     width: 30%;
 }
 
+#ccl p {
+    font-size: 1rem;
+    color: rgb(180, 180, 180);
+}
+
 #ccl h4 {
     text-align: center;
-    font-size: 2rem;
+    text-transform: uppercase;
     color: #52B6C2;
 }
 
@@ -99,16 +116,21 @@ button:hover {
     align-items: center;
 }
 
-#ccl div button {
+#ccl button {
     padding: 8px 8px;
-    border: none;
 }
 
+#ccl button:hover {
+    border: 2px solid whitesmoke;
+}
+
+
+/* footer
+copyright designs */
 footer {
     padding: 0 10px 0 10px;
     background-color: black;
     color: whitesmoke;
-    min-height: 10%;
     width: auto;
     display: flex;
     direction: column;
@@ -117,6 +139,7 @@ footer {
 }
 
 #copyright {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    color: rgb(180, 180, 180);
 }
     
