@@ -37,8 +37,6 @@ button {
     text-align:center;
     color: whitesmoke;
     background-color: #52B6C2;
-    border: 2px solid #52B6C2;
-    border-radius:2px;
 }
 
 button:hover {
@@ -51,6 +49,8 @@ button:hover {
  and hover designs */ 
 .main {
     padding: 12px 28px;
+    border: 2px solid #52B6C2;
+    border-radius:2px;
 }
 
 .main:hover {
@@ -83,8 +83,7 @@ button:hover {
 }
 
 
-/* ccl section 
-+ h4 + button designs */
+/* ccl section design */
 #ccl {
     background-color: black;
     color: whitesmoke;
@@ -98,9 +97,28 @@ button:hover {
     width: 30%;
 }
 
+/* ccl section responsive : ccl section turns into a column*/ 
+@media only screen and (max-width: 960px) {
+    #ccl {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; 
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    #ccl > * {
+        width: auto;
+    }
+}
+
+/* ccl section 
+p + h4 + div designs */
 #ccl p {
     font-size: 1rem;
     color: rgb(180, 180, 180);
+    text-align: center;
 }
 
 #ccl h4 {
@@ -112,30 +130,33 @@ button:hover {
 #ccl div {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 #ccl button {
-    padding: 8px 8px;
+    padding: 4px 6px;
+    border-radius:2px;
+    border: 1px solid #52B6C2;
+    margin-left: 10px;
+    margin-bottom: 20px;
 }
 
 #ccl button:hover {
-    border: 2px solid whitesmoke;
+    border: 1px solid whitesmoke;
 }
 
 
 /* footer
 copyright designs */
 footer {
-    padding: 0 10px 0 10px;
     background-color: black;
     color: whitesmoke;
     width: auto;
     display: flex;
-    direction: column;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 
 #copyright {
