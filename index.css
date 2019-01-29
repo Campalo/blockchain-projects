@@ -21,6 +21,15 @@ section {
     padding: 0 60px 0 60px;
 }
 
+/* section responsive : reduce the padding for small screen */
+@media only screen and (max-width: 960px) {
+    section {
+        padding: 0 25px 0 25px;
+    }
+}
+
+
+
 h1 {
     font-size: 3rem;
 }
@@ -59,27 +68,39 @@ a:hover {
 }
 
 
-/* intro section + article + button design */
+/* intro section + p + h1 + button design */
 #intro {
+    color: whitesmoke;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: flex-start;
+    align-items: flex-start;
     background-image: url(img/blocksbeach.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
-    min-height: 100%;
+    height: 100%;
 }
 
-#intro article {
-    width: 50%;
-    color: whitesmoke;
+#intro * {
+    max-width: 50%;
 }
 
 #intro a {
     margin-top: 30px;
     margin-bottom: 60px;
+    /* display: inline-block; */ /* As "a" is inline by default then it avoids the margins ; except if its dorect parents is a flex */
+}
+
+/* intro * responsive : enlarge the article space */
+/* mx-width 960px means all screen  size smaller than 960px*/
+@media only screen and (max-width: 960px) {
+    #intro * {
+        max-width: 80%;
+    }
+    #intro h1 {
+        font-size: 2.5rem;
+    }
 }
 
 
@@ -134,7 +155,7 @@ a:hover {
 }
 
 #ccl a {
-    padding: 4px 6px;
+    padding: 6px 8px;
     border-radius:2px;
     border: 1px solid #52B6C2;
     margin-left: 10px;
@@ -149,7 +170,7 @@ a:hover {
 /* footer + copyright designs */
 footer {
     background-color: black;
-    color: whitesmoke;
+    color: rgb(180, 180, 180);
     width: auto;
     display: flex;
     flex-direction: column;
@@ -157,8 +178,6 @@ footer {
     align-items: center;
 }
 
-#copyright {
-    font-size: 0.9rem;
-    color: rgb(180, 180, 180);
+small {
+    margin-bottom: 10px;
 }
-    
