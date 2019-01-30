@@ -4,15 +4,12 @@
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
     /* by default css takes only the element,
-    so if you have a padding then it pushes the element outside the screen dimension.
-    By taking the padding + element, the box-sizing solves this issue. */    
+    so if you have a padding around your element then,
+    it pushes the element outside the screen dimension (mostly on mobile) ;
+    By taking the "padding + element", the box-sizing solves this issue. */    
 }
 
-html {
-    height: 100%;
-}
-
-body {
+html, body {
     margin:0;
     height: 100%;
 }
@@ -22,13 +19,20 @@ section {
 }
 
 /* section responsive : reduce the padding for small screen */
+/* max-width 960px means all screen size smaller than 960px*/
 @media only screen and (max-width: 960px) {
     section {
         padding: 0 25px 0 25px;
     }
 }
 
-
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
 
 h1 {
     font-size: 3rem;
@@ -39,64 +43,101 @@ p {
     line-height: 30px;
 }
 
-/* "a" stands for a button with a link */
-a {
+header {
+    background-color: rgba(40, 40, 40, 0.6);
+    width: 100%;
+    position: fixed; /* this way the header menu stick to top when the user scrolls*/
+    top:0;
+}
+
+/* nav menu list design */
+#menu ul {
+    list-style: none;
+    margin: 0; 
+    display: inline; /* use this instead of flex box 
+                        in order to be able to use "float" on li element 
+                        see below */
+}
+
+#menu li {
+    float: right; /* all li content will align at the right of the screen
+                  go in the HTML to isolate one unic element 
+                  by aligning it on the left of the screen */
+
+}
+
+#menu li a {
+    /* width: calc(100% / 5); */
+    display: block; /* The block element makes the whole link area clickable 
+                    (not just the text), and it allows to specify a  width to this block */
+    padding: 12px 60px;
+    text-align: center;
+}
+
+#menu li a:hover:not(.active) { /* change the background color when the mouse is passing over the menu */
+    background-color: rgba(40, 40, 40, 0.5);
+}
+
+.active { /* change the background color when the menu is clicked on
+                    to show on which page the user is*/
+    background-color: rgba(40, 40, 40, 0.5);
+}
+  
+
+/* nav menu list responsive : hamburger menu for small screen 
+@media only screen and (max-width: 960px) {
+    #menu ul {
+        ...
+    }
+}
+*/
+
+/* button used inside the intro to link to another webpage*/
+.button {
     font-size: 0.8rem;
     font-weight: bold;
-    text-transform: uppercase;
     text-align:center;
     color: whitesmoke;
     background-color: #52B6C2;
-    text-decoration: none;
-}
-
-a:hover {
-    background-color: whitesmoke;
-    color: #52B6C2;
-}
-
-
-/* main button "a" and hover designs */ 
-.main {
     padding: 12px 28px;
     border: 2px solid #52B6C2;
     border-radius:2px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    /*display: inline-block;
+    /* As "a" is inline by default then it avoids the margins ; 
+    except if its direct parents is a flex */
 }
 
-.main:hover {
-    border: 2px solid #52B6C2;
+.button:hover {
+    background-color: whitesmoke;
+    color: #52B6C2;
+    border: 2px solid #52B6C2
 }
 
 
-/* intro section + p + h1 + button design */
+/* intro section + p + h1 design */
 #intro {
     color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     background-image: url(img/blocksbeach.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 #intro * {
     max-width: 50%;
 }
 
-#intro a {
-    margin-top: 30px;
-    margin-bottom: 60px;
-    /* display: inline-block; */ /* As "a" is inline by default then it avoids the margins ; except if its dorect parents is a flex */
-}
-
-/* intro * responsive : enlarge the article space */
-/* mx-width 960px means all screen  size smaller than 960px*/
+/* intro content responsive : enlarge the intro section space */
 @media only screen and (max-width: 960px) {
     #intro * {
-        max-width: 80%;
+        max-width: 100%;
     }
     #intro h1 {
         font-size: 2.5rem;
@@ -154,15 +195,23 @@ a:hover {
     align-items: center;
 }
 
-#ccl a {
+/* button social media designs */
+.buttonSM {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align:center;
+    color: whitesmoke;
+    background-color: #52B6C2;
     padding: 6px 8px;
     border-radius:2px;
     border: 1px solid #52B6C2;
     margin-left: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 
-#ccl a:hover {
+.buttonSM:hover {
+    background-color: whitesmoke;
+    color: #52B6C2;
     border: 1px solid whitesmoke;
 }
 
