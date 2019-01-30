@@ -44,7 +44,7 @@ p {
 }
 
 header {
-    background-color: rgba(40, 40, 40, 0.6);
+    background-color: rgba(40, 40, 40, 0.75);
     width: 100%;
     position: fixed; /* this way the header menu stick to top when the user scrolls*/
     top:0;
@@ -54,6 +54,13 @@ header {
 #menu {
     padding: 0 60px 0 60px;
 }
+
+/* nav menu responsive : hamburger menu for small screen */
+@media only screen and (max-width: 960px) {
+    #menu {
+        padding: 0 25px 0 25px;    }
+}
+
 
 #menu ul {
     list-style: none;
@@ -78,20 +85,19 @@ header {
 }
 
 #menu li a:hover:not(.active) { /* change the background color when the mouse is passing over the menu */
-    background-color: rgba(40, 40, 40, 0.5);
+    background-color: rgba(40, 40, 40, 0.7);
 }
 
 .active { /* change the background color when the menu is clicked on
                     to show on which page the user is*/
-    background-color: rgba(40, 40, 40, 0.5);
+    background-color: rgba(40, 40, 40, 0.7);
 }
   
 
 /* nav menu list responsive : hamburger menu for small screen 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 800px) {
     #menu ul {
-        ...
-    }
+        ... }
 }
 */
 
