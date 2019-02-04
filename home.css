@@ -1,0 +1,193 @@
+/***
+ * INTRO
+ ***/
+
+#intro {
+    color: whitesmoke;
+    background-image: url(img/blocksbeach.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#intro > * {
+    max-width: 50%;
+}
+
+#intro button {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+/* intro content responsive : enlarge the intro section space */
+@media only screen and (max-width: 960px) {
+    #intro > * {
+        max-width: 100%;
+    }
+    #intro h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/***
+ * LYON 
+ ***/
+
+
+/***
+ * PROJECTS PRESENTATIONS
+ ***/
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    margin: 10px;
+}
+
+h4 {
+    margin: 5px;
+    text-transform: uppercase;
+    color: rgb(200, 200, 200);
+}
+
+h5 {
+    text-transform: uppercase;
+    color: #52B6C2;
+    margin: 5px;
+}
+
+#presentation {
+    background-color: rgb(240, 240, 240);
+}
+
+.grid {
+    padding: 30px 120px;
+    border:2px #52B6C2 solid;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 100px); 
+    /* define the structure of the grid
+    /* first the number of rows then the columns : 4 rows, 4 columns   
+    /* in "grid" we use fr for fraction instead of % 
+    /* we may use minmax(100px, 600px) for responsive */
+    grid-gap: 40px; 
+    /* define the gap between the rows then gaps between the columns, 
+    except if the value is the same for both */
+}
+
+/* boxes to link to the articles presenting the projects */
+.box {
+   background-image: url(img/water.png);
+   background-repeat: no-repeat;
+   background-position: bottom;
+   background-size: cover;
+   border: 2px black solid; 
+   border-radius: 5px;
+   color: whitesmoke;
+   padding: 10px 20px;
+   display: flex;
+   direction: column; 
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+/****
+*** ISSUE: 
+Check why the column is not working, 
+and why it's the wrap who does all the work 
+****/ 
+
+
+ /* the two boxes presenting the two forms of BC projects: Company and NonProfit */
+.a,
+.f {
+    background-image: none;
+    background-color: black;
+}
+
+.box p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* "a" is the first box : 
+define its structure : how much rows and columns
+"grid-area" = grid-row-start / grid-column-start / grid-row-end / grid-column-end
+"span" determine the number of columns or row the box takes */
+
+ .a { 
+    grid-area: 1 / 1 / span 2 / span 2;  
+ }
+ .b {
+     grid-area: 1 / 3 / span 3 / span 1 ;
+ }
+ .c {
+    grid-area: 1 / 4 / span 3 / span 1 ;
+}
+.d { 
+    grid-area: 3 / 1 / span 3 / span 1;  
+ }
+ .e {
+     grid-area: 3 / 2 / span 3 / span 1 ;
+ }
+ .f {
+    grid-area: 4 / 3 / span 2 / span 2 ;
+}
+
+/* grid responsive : reduce the padding and gap for small screen */
+/* max-width 1300px means all screen size smaller than 1300px*/
+@media only screen and (max-width: 1300px) {
+    .grid {
+        padding: 30px 0;
+        grid-gap: 20px;    
+    }
+    .box {
+        padding: 5px;
+    }
+    .box p {
+        font-size: 1rem;
+    }
+}
+
+/* max-width: 960 : tablet or smaller*/
+@media only screen and (max-width: 960px) {
+    .grid {
+        padding: 10px 120px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(12, 150px);
+        grid-gap: 20px;
+    }
+    .a { 
+        grid-area: 1 / 1 / span 2 / span 2;  
+     }
+    .b {
+         grid-area: 3 / 1 / span 2 / span 2;
+     }
+    .c {
+        grid-area: 5 / 1 / span 2 / span 2;
+    }
+    .d { 
+        grid-area: 7 / 1 / span 2 / span 2;  
+     }
+    .e {
+         grid-area: 9 / 1 / span 2 / span 2 ;
+     }
+    .f {
+        grid-area: 11 / 1 / span 2 / span 2 ;
+    }        
+}
+
+/* max-width: 600 : mobile*/
+@media only screen and (max-width: 600px) {
+    .grid {
+        padding: 10px 0;
+    }
+}

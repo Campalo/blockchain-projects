@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf8">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="home.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -19,69 +20,149 @@
 
 <body>
 
+    <!-- Menu -->
     <header>
-        <!--Website Menu-->
-        <nav id="menu">
-            <ul>
-                <li style="float:left"> <a class="active" href="https://campalo.github.io/blockchain-projects/">Home</a></li>
-                <li> <a href="#About">About</a></li>
-                <li> <a href="#NonProfits">Non-profits</a></li>
-                <li> <a href="#Companies">Companies</a></li>
-                <li> <a href="#Lyon">Lyon</a></li>
-            </ul>
-        </nav>
+        <a class="active" href="https://campalo.github.io/blockchain-projects/">Home</a>
+        <div>
+            <a>Lyon</a>
+            <a>Companies</a>
+            <a>Non-profits</a>
+            <a>About</a>
+        </div>
     </header>
 
-        <!--Introduction of the Home page-->
+    <!--TO DO 
+    <nav>
+        <a href="">
+            <img src="" alt="Twitter"/>
+        </a>
+        <a href="">
+            <img src="" alt="LinkedIn"/>
+        </a>
+        <a href="">
+            <img src="" alt="Medium"/>
+        </a>
+    </nav>
+    -->
+
+    <!--Introduction of the Home page-->
     <section id="intro">
-            <h1>French Blockchain Projects to watch in 2019</h1>
-            <p>
-                Explore how innovative projects integrate the <strong>decentralized technology</strong> to empower the community from
-                diverse industries.
-            </p>
-            <a class="button" href="https://campalo.github.io/blockchain-projects/">Just a button</a> 
-            <!-- add the href="..." when it's ready + name it "Explore projects"-->
-    </section>
-
-    <!--
-        <nav id="menuSM">
-            <ul>
-                <li>Twitter</li>
-                <li>Linkedin</li>
-                <li>Medium</li>
-            </ul>
-        </nav>
-    -->
-
-
-    <!--Lyon et la blockchain / innovation / entrepreneuriat
-    <section>
-    </section>
-    -->
-
-        <!--Présentation des projets BC à Lyon 
-    <section>
-        Companies
-        Non-profits
-    </section>
-    -->
-
-    <section id="ccl">
+        <h1>French Blockchain Projects to watch in 2019</h1>
         <p>
-            <em>The Blockchain projects website aims to promote innovative blockchain startups and non-profit organizations
-                based in Lyon, France.</em>
+            Explore how innovative projects integrate the <strong>decentralized technology</strong> to empower the
+            community from
+            diverse industries.
         </p>
-        <h4>
-            Let's connect!
-        </h4>
-        <div>
-            <a class="buttonSM" href="https://www.linkedin.com/in/camille-charteau/">Linkedin</a>
-            <a class="buttonSM" href="https://twitter.com/Camilie_C">Twitter</a>
-            <a class="buttonSM" href="https://medium.com/@CamilleCharteau">Medium</a>
+        <a href="#presentation">
+            <button class="btn">Explore projects</button>
+        </a>
+    </section>
+
+
+    <!--TO DO 
+        Lyon et la blockchain / innovation / entrepreneuriat sur fond noir
+    <section>
+    </section>
+    -->
+
+
+    <section id="presentation">
+        <h2>Explore the main Blockchain-based projects from France</h2>
+        <p>
+            Many blockchain technology applications have emerged in France - especially in Lyon, a dynamic city for
+            economic growth and innovation. Some of these blockchain-powered projects evolved into startups or
+            companies while others mature as non-profit organizations. Discover them here!
+        </p>
+
+        <div class="grid">
+
+            <div class="box a">
+                <h3>Blockchain Companies and Startups</h3>
+                <p>
+                    Some of the most innovative companies and startups have developed new business models based on this
+                    cutting edge technology. They are exploring and creating new business opportunities in this
+                    emerging market.
+                </p>
+            </div>
+
+            <div class="box b">
+                <h3>Blockchain Video Game Studio</h3>
+                <h4>B2Expand</h4>
+                <h5>Company</h5>
+                <p>
+                    Transforming the Indie Video Game Industry by empowering players. </p>
+                <a target="_blank" href="http://b2expand.com/">
+                    <button class="btn">Visit B2Expand</button>
+                </a>
+            </div>
+
+            <div class="box c">
+                <h3>Marketplace for Cloud Resources</h3>
+                <h4>iExec</h4>
+                <h5>Company</h5>
+                <p>
+                    Developing the first Decentralized Marketplace to trade Computing Power. </p>
+                <a target="_blank" href="https://iex.ec/fr/">
+                    <button class="btn">Visit iExec</button>
+                </a>
+            </div>
+
+            <div class="box d">
+                <h3>Crypto Assets and Blockchain community</h3>
+                <h4>CryptoLyon</h4>
+                <h5>NonProfit</h5>
+                <p>
+                    Shaping a Favorable Ecosystem for the emerging projects in Lyon. </p>
+                <a target="_blank" href="https://www.crypto-lyon.fr/">
+                    <button class="btn">Visit CryptoLyon</button>
+                </a>
+            </div>
+
+            <div class="box e">
+                <h3>Blockchain & Gender Equity</h3>
+                <h4>TAAL Project</h4>
+                <h5>NonProfit</h5>
+                <p>
+                    Making the access to Technological Education easier and promoting Gender Equity in the tech field.
+                </p>
+                <a target="_blank" href="https://www.taalproject.com/">
+                    <button class="btn">Visit TAAL</button>
+                </a>
+            </div>
+
+            <div class="box f">
+                <h3>Blockchain NonProfits</h3>
+                <p>
+                    Amongst these leading edge projects, some are organized into NonProfit Associations. Their main
+                    objective is to make the blockchain technology more accessible to the public and companies.
+                </p>
+            </div>
+
         </div>
     </section>
 
     <footer>
+        <section id="ccl">
+            <p>
+                <em>The Blockchain projects website aims to promote innovative blockchain startups and non-profit
+                    organizations
+                    based in Lyon, France.</em>
+            </p>
+            <h6>
+                Let's connect!
+            </h6>
+            <div>
+                <a href="https://www.linkedin.com/in/camille-charteau/">
+                    <button class="btn-sm">Linkedin</button>
+                </a>
+                <a href="https://twitter.com/Camilie_C">
+                    <button class="btn-sm">Twitter</button>
+                </a>
+                <a href="https://medium.com/@CamilleCharteau">
+                    <button class="btn-sm">Medium</button>
+                </a>
+            </div>
+        </section>
         <small> &copy; 2019 Camille Charteau. All Rights Reserved.</small>
     </footer>
 

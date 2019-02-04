@@ -14,24 +14,14 @@ html, body {
     height: 100%;
 }
 
-section {
-    padding: 0 60px 0 60px;
-}
-
-/* section responsive : reduce the padding for small screen */
-/* max-width 960px means all screen size smaller than 960px*/
-@media only screen and (max-width: 960px) {
-    section {
-        padding: 0 25px 0 25px;
-    }
-}
-
-a {
+a,
+a button {
     text-decoration: none;
     text-transform: uppercase;
     color: whitesmoke;
     font-size: 0.8rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 h1 {
@@ -43,121 +33,124 @@ p {
     line-height: 30px;
 }
 
+/***
+ * HEADER
+ ***/
+
 header {
-    background-color: rgba(40, 40, 40, 0.75);
+    background-color: rgba(60, 60, 60, 0.75);
     width: 100%;
     position: fixed; /* this way the header menu stick to top when the user scrolls*/
     top:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
 }
 
-/* nav menu list design */
-#menu {
-    padding: 0 60px 0 60px;
+header a {
+    padding: 20px 28px;
 }
 
-/* nav menu responsive : hamburger menu for small screen */
+header a:hover:not(.active),
+header a.active { /* change the background color when the mouse is passing over the menu */
+    background-color: rgba(20, 20, 20, 0.5);
+}
+
+/* Header responsive : reduced padding for small screen */
+/* max-width: 960 : tablet or smaller*/
 @media only screen and (max-width: 960px) {
-    #menu {
-        padding: 0 25px 0 25px;    }
+    header {
+        padding: 0 25px 0 25px;
+    }
 }
 
-
-#menu ul {
-    list-style: none;
-    margin:0; 
-    display: inline; /* use this instead of flex box 
-                        in order to be able to use "float" on li element 
-                        see below */
-}
-
-#menu li {
-    float: right; /* all li content will align at the right of the screen
-                  go in the HTML to isolate one unic element 
-                  by aligning it on the left of the screen */
-}
-
-#menu li a {
-    /* width: calc(100% / 5); */
-    display: block; /* The block element makes the whole link area clickable 
-                    (not just the text), and it allows to specify a  width to this block */
-    padding: 12px 30px;
-    text-align: center;
-}
-
-#menu li a:hover:not(.active) { /* change the background color when the mouse is passing over the menu */
-    background-color: rgba(40, 40, 40, 0.7);
-}
-
-.active { /* change the background color when the menu is clicked on
-                    to show on which page the user is*/
-    background-color: rgba(40, 40, 40, 0.7);
-}
-  
-
-/* nav menu list responsive : hamburger menu for small screen 
+/* TO DO  
+Header responsive : hamburger menu for small screen
 @media only screen and (max-width: 800px) {
-    #menu ul {
-        ... }
+    header {}
 }
 */
 
-/* button used inside the intro to link to another webpage*/
-.button {
+/***
+ * SECTION
+ ***/
+
+section {
+    padding: 30px 60px 30px 60px;
+}
+
+/* section responsive : reduce the padding for small screen */
+/* max-width: 960 : tablet or smaller*/
+@media only screen and (max-width: 960px) {
+    section {
+        padding: 25px;
+    }
+}
+
+
+/***
+ * BUTTON
+ ***/
+
+button {
     font-size: 0.8rem;
     font-weight: bold;
     text-align:center;
     color: whitesmoke;
     background-color: #52B6C2;
-    padding: 12px 28px;
-    border: 2px solid #52B6C2;
     border-radius:2px;
-    margin-top: 30px;
-    margin-bottom: 60px;
-    /*display: inline-block;
-    /* As "a" is inline by default then it avoids the margins ; 
-    except if its direct parents is a flex */
 }
 
-.button:hover {
+button:hover {
     background-color: whitesmoke;
     color: #52B6C2;
-    border: 2px solid #52B6C2
+}
+
+/* button used inside the intro to link to another webpage*/
+button.btn {
+    padding: 10px 20px;
+    border: 2px solid #52B6C2;
+    transition: all 0.2s ease-in-out;
+}
+
+button.btn:hover {
+    border: 2px solid #52B6C2;
 }
 
 
-/* intro section + p + h1 design */
-#intro {
-    color: whitesmoke;
-    background-image: url(img/blocksbeach.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-    height: 100%;
+/* button social media designs */
+button.btn-sm {
+    padding: 6px 8px;
+    border: 1px solid #52B6C2;
+    margin-left: 10px;
+    margin-bottom: 20px; 
+    margin-top: 10px;
+}
+
+button.btn-sm:hover {
+    border: 1px solid whitesmoke;
+}
+
+
+
+/***
+ * FOOTER
+ ***/
+
+footer {
+    background-color: black;
+    color: rgb(180, 180, 180);
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
-#intro * {
-    max-width: 50%;
-}
-
-/* intro content responsive : enlarge the intro section space */
-@media only screen and (max-width: 960px) {
-    #intro * {
-        max-width: 100%;
-    }
-    #intro h1 {
-        font-size: 2.5rem;
-    }
-}
-
-
-/* ccl section design */
 #ccl {
-    background-color: black;
-    color: whitesmoke;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -168,30 +161,13 @@ header {
     width: 30%;
 }
 
-/* ccl section responsive : ccl section turns into a column*/ 
-@media only screen and (max-width: 960px) {
-    #ccl {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center; 
-    }
-}
-
-@media only screen and (max-width: 960px) {
-    #ccl > * {
-        width: auto;
-    }
-}
-
-/* ccl section p + h4 + div designs */
 #ccl p {
     font-size: 1rem;
-    color: rgb(180, 180, 180);
     text-align: center;
 }
 
-#ccl h4 {
+h6 {
+    font-size: 1.2rem;
     text-align: center;
     text-transform: uppercase;
     color: #52B6C2;
@@ -204,38 +180,19 @@ header {
     align-items: center;
 }
 
-/* button social media designs */
-.buttonSM {
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-align:center;
-    color: whitesmoke;
-    background-color: #52B6C2;
-    padding: 6px 8px;
-    border-radius:2px;
-    border: 1px solid #52B6C2;
-    margin-left: 10px;
-    margin-bottom: 20px; 
-}
 
-.buttonSM:hover {
-    background-color: whitesmoke;
-    color: #52B6C2;
-    border: 1px solid whitesmoke;
+/* ccl section responsive : ccl section turns into a column*/ 
+/* max-width: 960 : tablet or smaller*/
+@media only screen and (max-width: 960px) {
+    #ccl {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; 
+    }
+    #ccl > * {
+        width: auto;
+    }
 }
 
 
-/* footer + copyright designs */
-footer {
-    background-color: black;
-    color: rgb(180, 180, 180);
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-small {
-    margin-bottom: 10px;
-}
