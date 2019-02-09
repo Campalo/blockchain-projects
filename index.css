@@ -37,22 +37,35 @@ p {
 /***
  * HEADER
  ***/
+/* ISSUE: Header is set behind the grid, instead of being set in front of the grid */
 
 header {
     background-color: rgba(60, 60, 60, 0.75);
     width: 100%;
     position: fixed; /* this way the header menu stick to top when the user scrolls*/
     top:0;
-    display: flex;
+    display: flex; /* by default the "align-items" is stretch" */
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     padding: 0 60px;
+    height: 55px;
+    z-index: 1; /* all is fixed in position zero by default, 
+                so by setting 1 to the header it fixes it over the rest of the page */
 }
 
-/* home inside the header*/ 
+header img {
+    height: 30px;
+}
+
+header div {
+    display: flex; /* by default the "align-items" is stretch" */
+}
+
 header a {
-    padding: 20px 25px; 
+    display: flex; 
+    align-items:center; /* to center the "span" txt and the "img" */
+    padding-right : 20px;
+    padding-left : 20px;
 }
 
 header a:hover {
@@ -110,7 +123,7 @@ button {
     text-align:center;
     color: whitesmoke;
     background-color: #52B6C2;
-    border-radius:2px;
+    border-radius:3px;
 }
 
 button:hover {
@@ -121,12 +134,12 @@ button:hover {
 /* button used inside the intro to link to another webpage*/
 button.btn {
     padding: 10px 20px;
-    border: 2px solid #52B6C2;
+    border: 3px solid #52B6C2;
     transition: all 0.2s ease-in-out;
 }
 
 button.btn:hover {
-    border: 2px solid #52B6C2;
+    border: 3px solid #52B6C2;
 }
 
 
@@ -181,6 +194,7 @@ h6 {
     text-align: center;
     text-transform: uppercase;
     color: #52B6C2;
+    letter-spacing: 1px;
 }
 
 #ccl div {

@@ -105,18 +105,11 @@ h5 {
 }
 
 .box button {
-    position: absolute;
+    position: absolute; /* used to set the button position inside the boxes */
     bottom : 20px;
 }
 
-/****
-*** ISSUE: 
-Check why the column is not working, 
-and why it's the wrap who does all the work 
-****/ 
-
-
- /* the two boxes presenting the two forms of BC projects: Company and NonProfit */
+/* the two boxes presenting the two forms of BC projects: Company and NonProfit */
 .a,
 .f {
     background-image: none;
