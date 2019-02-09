@@ -37,8 +37,6 @@ p {
 /***
  * HEADER
  ***/
-/* ISSUE: Header is set behind the grid, instead of being set in front of the grid */
-
 header {
     background-color: rgba(60, 60, 60, 0.75);
     width: 100%;
@@ -50,7 +48,7 @@ header {
     padding: 0 60px;
     height: 55px;
     z-index: 1; /* all is fixed in position zero by default, 
-                so by setting 1 to the header it fixes it over the rest of the page */
+                so by setting 1 to the header it fixes it over the rest of the page elements */
 }
 
 header img {
@@ -131,7 +129,7 @@ button:hover {
     color: #52B6C2;
 }
 
-/* button used inside the intro to link to another webpage*/
+/* button used inside the intro */
 button.btn {
     padding: 10px 20px;
     border: 3px solid #52B6C2;

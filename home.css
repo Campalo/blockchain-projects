@@ -101,13 +101,6 @@ h5 {
    color: whitesmoke;
    padding: 10px 20px;
    position: relative; /* used to set the button position inside the boxes */
-   /*
-   display: flex;
-   direction: column; 
-   flex-wrap: wrap;
-   align-items: center;
-   justify-content: space-evenly;
-   */
 }
 
 .box button {
