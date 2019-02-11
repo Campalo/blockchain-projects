@@ -38,7 +38,7 @@ p {
  * HEADER
  ***/
 header {
-    background-color: rgba(60, 60, 60, 0.75);
+    background-color: rgba(41, 41, 41, 0.95);
     width: 100%;
     position: fixed; /* this way the header menu stick to top when the user scrolls*/
     top:0;
