@@ -1,8 +1,10 @@
-# Blockchain-Projects
+# Blockchain-Projects Landing page
 
-Simple landing page to present the French Blockchain projects based in Lyon to watch in 2019. 
+## Creating a simple landing page to present some Blockchain projects in 2019, using:
 
-Written only on HTML and CSS. 
+* HTML5
+* CSS3 (css grid, flexbox, mediaquery, position, ...)
+* GITHUB PAGES
 
 Hosted with Github Page, you can visit it [here](https://campalo.github.io/blockchain-projects/) 
 
